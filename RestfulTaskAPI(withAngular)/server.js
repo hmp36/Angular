@@ -6,7 +6,8 @@ const session = require('express-session');
 
 app.use(session({ secret: 'Invictus' }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "./client/static")));
+app.use(express.static(__dirname + '/my-angular-app/dist'));
+
 app.set('views', path.join(__dirname, './client/views'));
 app.set('view engine', 'ejs');
 
