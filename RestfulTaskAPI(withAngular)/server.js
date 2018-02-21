@@ -6,10 +6,8 @@ const session = require('express-session');
 
 app.use(session({ secret: 'Invictus' }));
 app.use(bodyParser.json());
-app.use(express.static(__dirname + '/my-angular-app/dist'));
+app.use(express.static(__dirname + '/newAngApp/dist'));
 
-app.set('views', path.join(__dirname, './client/views'));
-app.set('view engine', 'ejs');
 
 require('./server/config/mongoose.js');
 var routes_setter = require('./server/config/routes.js');

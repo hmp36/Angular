@@ -5,4 +5,5 @@ module.exports = function (app) {
     app.get('/tasks/:id', Tasks.show);
     app.put('/tasks/:id', Tasks.update);
     app.delete('/tasks/:id', Tasks.destroy);
+    app.get("/");
 }
